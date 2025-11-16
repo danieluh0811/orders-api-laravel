@@ -25,6 +25,30 @@ PAYMENT_GATEWAY_URL=https://order-api-failed.free.beeceptor.com
 
 Con este cambio simple la API permite validar ambos escenarios (éxito y fallo) sin modificar el código.
 
+# Nota importante sobre el servicio Mock (Beeceptor)
+
+# Nota importante:
+Los endpoints gratuitos de Beeceptor expiran automáticamente después de varias horas o días de inactividad.
+Si los mocks dejan de responder o devuelven un error inesperado, simplemente reemplaza la URL del gateway por cualquier otro servicio mock (Beeceptor nuevo, Mocky, Mockoon, etc.).
+La funcionalidad de la API permanece intacta, ya que el endpoint externo solo simula la confirmación del pago.
+
+# Ejemplo de respuestas del servicio externo mock
+
+Estos son los cuerpos exactos (body) que devuelve Beeceptor para cada escenario:
+
+# Pago exitoso (success)
+{
+    "success": true,
+    "external_id": "ext_123"
+}
+
+# Pago fallido (failed)
+{
+    "success": false,
+    "external_id": "ext_123"
+}
+
+
 ---
 
 ## Tecnologías utilizadas
