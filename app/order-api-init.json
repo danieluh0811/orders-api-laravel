@@ -1,0 +1,7 @@
+{
+    "paymentMode": "success",
+    "paymentUrls": {
+        "success": "https://order-api-success.free.beeceptor.com",
+        "failed": "https://order-api-failed.free.beeceptor.com"
+    }
+}
