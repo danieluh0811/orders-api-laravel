@@ -13,7 +13,7 @@ class PaymentResponseHelper
             'orderId'                => $payment->orderId,
             'amount'                 => $payment->amount,
             'status'                 => $payment->status?->value(),
-            'externalTransactionId'  => $payment->externalTransactionId,
+            //'externalTransactionId'  => $payment->externalTransactionId,
         ];
     }
 
