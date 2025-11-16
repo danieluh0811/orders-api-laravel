@@ -83,13 +83,12 @@ Base path: /api/orders
 
 Método	Endpoint	Descripción
 # GET	/api/orders	Lista todos los pedidos con su estado, intentos y pagos.
-# GET	/api/orders/{id}	Obtiene un pedido por su ID.
 # POST	/api/orders	Crea un nuevo pedido.
 
 # Payments
 
 Base path: /api/payments
 
-Método	Endpoint	Descripción
-# GET	/api/payments	Lista todos los pagos.
+Método	Endpoint	Descripción 
+# GET /api/payments/order/{orderId} Lista pagos asociados a un pedido.
 # POST	/api/payments	Registra un nuevo intento de pago y procesa la transacción.
