@@ -72,3 +72,24 @@ php artisan serve
 
 # Ejecuta los tests
 php artisan test
+
+# Endpoints de la API
+
+La API expone los siguientes endpoints organizados por recursos: Orders y Payments.
+
+# Orders
+
+Base path: /api/orders
+
+Método	Endpoint	Descripción
+# GET	/api/orders	Lista todos los pedidos con su estado, intentos y pagos.
+# GET	/api/orders/{id}	Obtiene un pedido por su ID.
+# POST	/api/orders	Crea un nuevo pedido.
+
+# Payments
+
+Base path: /api/payments
+
+Método	Endpoint	Descripción
+# GET	/api/payments	Lista todos los pagos.
+# POST	/api/payments	Registra un nuevo intento de pago y procesa la transacción.
